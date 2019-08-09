@@ -1,0 +1,4 @@
+.layout-container {
+    min-height: calc(100vh - #{$headerHeight + $footerHeight});
+    background-color: #E0E0E0;
+}

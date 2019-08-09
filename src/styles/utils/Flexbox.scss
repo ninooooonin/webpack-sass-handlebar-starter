@@ -1,0 +1,48 @@
+@mixin flexPosition($align: center, $justify: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flexDirection($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin flexPositionClasses {
+    &.center {
+        @include flexPosition(center, center);
+    }
+
+    &.left {
+        @include flexPosition(center, flex-start);
+    }
+
+    &.right {
+        @include flexPosition(center, flex-end);
+    }
+
+    &.between {
+        @include flexPosition(center, space-between);
+    }
+}
+
+@mixin flexDirectionClasses {
+
+    &.row {
+        @include flexDirection(row);
+    }
+
+    &.row-reverse {
+        @include flexDirection(row-reverse);
+    }
+
+    &.column {
+        @include flexDirection(column);
+    }
+
+    &.column-reverse {
+        @include flexDirection(column-reverse);
+    }
+
+}
