@@ -2,3 +2,46 @@
     min-height: calc(100vh - #{$headerHeight + $footerHeight});
     background-color: #E0E0E0;
 }
+
+.container {
+    display: block;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/** 
+    Usage : 
+
+    #flexDirectionClasses
+    <div class="content row"></div>
+    <div class="content row-reverse"></div>
+    <div class="content column"></div>
+    <div class="content column-reverse"></div>
+
+
+    #flexPositionClasses
+    <div class="content center">
+        <div>content to align</div>
+    </div>
+    <div class="content left">
+        <div>content to align</div>
+    </div>
+    <div class="content right">
+        <div>content to align</div>
+    </div>
+    <div class="content between">
+        <div>content to align</div>
+    </div>
+**/
+
+.content {
+    @include flexDirectionClasses;
+    @include flexPositionClasses;
+}
+
+// xs: '480px',
+// sm: '576px',
+// md: '768px',
+// lg: '992px',
+// xl: '1200px',
+// xxl: '1600px',
