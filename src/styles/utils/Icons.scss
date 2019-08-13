@@ -1,0 +1,49 @@
+@mixin iconCustomDimension($width : 16px, $height: 16px) {
+    width: $width;
+    height: $height;
+}
+
+@mixin iconDimension($dimension : 16px) {
+    width: $dimension;
+    height: $dimension;
+}
+
+@mixin iconDimensionClasses {
+
+    &.icon-xs {
+        @include iconDimension(16px);
+    }
+
+    &.icon-sm {
+        @include iconDimension(24px);
+    }
+
+    &.icon-md {
+        @include iconDimension(32px);
+    }
+
+    &.icon-lg {
+        @include iconDimension(48px);
+    }
+
+    &.icon-xl {
+        @include iconDimension(48px);
+    }
+
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-size: 100%;
+    @include iconDimensionClasses;
+
+    // &.danger {
+    //     background-image: url('');
+    // }
+
+}
