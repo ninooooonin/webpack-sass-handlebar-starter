@@ -31,12 +31,18 @@ module.exports = {
       from: Path.resolve(__dirname, '../src/assets/images'),
       to: 'assets/images'
     }]),
-
     new HtmlWebpackPlugin({
       title: 'With Handlebars Template Engine',
       template: Path.resolve(__dirname, '../src/index.hbs'),
       minify: false
-    })
+    }),
+    // Auth Related
+    new HtmlWebpackPlugin({
+      title: 'Login',
+      filename: "login.html",
+      template: Path.resolve(__dirname, '../src/views/pages/auth/login.hbs'),
+      minify: false
+    }),
   ],
   resolve: {
     alias: {
